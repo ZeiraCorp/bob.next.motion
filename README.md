@@ -65,11 +65,11 @@ First install `screen`
 
 Then create a script: `start`
 
-    node ~bob.next/yo.js
+    node ~/bob.next/yo.js
 
 Make the script executable:
 
-    chmod +x ~/start
+    chmod +x start
 
 Edit the root startup script file:
 
@@ -82,6 +82,8 @@ And add the following line before exit 0
 And ...
 
     sudo reboot
+
+    #to check: screen -DR
 
 ## Set wifi parameters on the RPI
 
