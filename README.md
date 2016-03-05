@@ -94,6 +94,23 @@ And ...
         psk="a_nice_password"
     }
 
+### Fixing WiFI Dropout Issues
+
+*from:* [https://learn.adafruit.com/adafruits-raspberry-pi-lesson-3-network-setup/test-and-configure#fixing-wifi-dropout-issues](https://learn.adafruit.com/adafruits-raspberry-pi-lesson-3-network-setup/test-and-configure#fixing-wifi-dropout-issues)
+
+If you find your module 'drops out' from time to time, you can fix it fairly easily with a command line fix (thanks perseus286!)
+
+Create and edit a new file in `/etc/modprobe.d/8192cu.conf`
+
+    sudo nano /etc/modprobe.d/8192cu.conf
+
+and paste the following in
+
+    # Disable power saving
+    options 8192cu rtw_power_mgnt=0 rtw_enusbss=1 rtw_ips_mode=1
+
+Then reboot with sudo reboot
+
 ## Set hostName of the RPI
 
     sudo nano /etc/hosts
